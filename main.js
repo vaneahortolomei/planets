@@ -1,9 +1,5 @@
 import './style.css'
 import './src/index.scss'
-import earth from './img/earth2.png';
-import mars from './img/mars.png';
-import mercury from './img/mercury.png';
-import venus from './img/venus.png';
 
 
 document.querySelector('#app').innerHTML = `
