@@ -1,0 +1,218 @@
+.planet {
+    opacity: 1;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    transform: scaleX(0.2);
+
+    &__container {
+        width: 60px;
+        height: 60px;
+        animation: rotateContainer 22s infinite linear;
+        position: absolute;
+
+        &--venus {
+            left: 30px;
+        }
+
+        &--mercury {
+            left: 100px;
+        }
+
+        &--earth {
+            left: 170px;
+        }
+
+        &--mars {
+            left: 300px;
+            top: 50%;
+        }
+
+    }
+
+    &__index {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        &--venus {
+            animation: hideFirstPlanet 22s infinite linear;
+        }
+
+        &--mercury {
+            animation: hideSecondPlanet 22s infinite linear;
+        }
+
+        &--earth {
+            animation: hideThirdPlanet 22s infinite linear;
+        }
+
+        &--mars {
+            animation: hideFourthPlanet 22s infinite linear;
+        }
+    }
+
+    &__rotate {
+        width: 100%;
+        height: 100%;
+        animation: rotateAnimation 22s infinite linear;
+        position: absolute;
+    }
+
+    &--sun {
+        background: #eadfb9;
+        box-shadow: 0 0 50px 10px #eadfb9;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        animation: flashSun 5s infinite linear;
+    }
+
+    &--mercury {
+        background: #a77c3e;
+        width: 30px;
+        height: 30px;
+        background: url("/img/mercury.png") center center;
+        background-size: cover;
+    }
+
+    &--venus {
+        background: #f2a639;
+        width: 65px;
+        height: 65px;
+        background: url("/img/venus.png") center center;
+        background-size: cover;
+    }
+
+    &--earth {
+        background: #0f4a85;
+        width: 80px;
+        height: 80px;
+        background: url("/img/earth2.png") center center;
+        background-size: cover;
+    }
+
+    &--mars {
+        background: #e1682d;
+        width: 120px;
+        height: 120px;
+        animation: marsSize 22s infinite linear;
+        background: url("/img/mars.png") center center;
+        background-size: cover;
+    }
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes rotateContainer {
+    0% {
+        transform: rotateZ(360deg)
+    }
+    20% {
+        z-index: -1;
+    }
+    50% {
+        z-index: -1;
+    }
+    100% {
+        transform: rotateZ(0deg)
+    }
+}
+
+@keyframes hideFirstPlanet {
+    0% {
+        z-index: -999;
+    }
+
+    70% {
+        z-index: 999;
+    }
+    100% {
+        z-index: 999;
+    }
+}
+
+@keyframes hideSecondPlanet {
+    0% {
+        z-index: -999;
+    }
+    20% {
+        z-index: 999;
+    }
+    100% {
+        z-index: -999;
+    }
+}
+
+@keyframes hideThirdPlanet {
+    0% {
+        z-index: -998;
+    }
+    20% {
+        z-index: 998;
+    }
+    80% {
+        z-index: -998;
+    }
+    100% {
+        z-index: -998;
+    }
+}
+
+@keyframes hideFourthPlanet {
+    0% {
+        z-index: -997;
+    }
+    20% {
+        z-index: 997;
+    }
+    60% {
+        z-index: -997;
+    }
+    100% {
+        z-index: -997;
+    }
+}
+
+@keyframes marsSize {
+    0% {
+        width: 120px;
+        height: 120px;
+    }
+    35%{
+        width: 100px;
+        height: 100px;
+    }
+    70% {
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@keyframes flashSun {
+    0% {
+        box-shadow: 0 0 50px 15px #eadfb9;
+    }
+    30% {
+        box-shadow: 0 0 50px 3px #eadfb9;
+    }
+    50% {
+        box-shadow: 0 0 50px 5px #eadfb9;
+    }
+    70% {
+        box-shadow: 0 0 50px 7px #eadfb9;
+    }
+   100% {
+       box-shadow: 0 0 50px 15px #eadfb9;
+   }
+}

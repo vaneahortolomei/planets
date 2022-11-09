@@ -1,0 +1,21 @@
+.planets {
+    max-width: 1000px;
+    width: 200%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__wrapper {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        transform: rotate(-10deg) scaleX(5);
+        border-radius: 50%;
+    }
+}
+
